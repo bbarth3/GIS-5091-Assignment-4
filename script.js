@@ -60,7 +60,7 @@
       // Add the home button to the top left corner of the view
     view.ui.add(homeBtn, "top-left");
     
-    [stl, bei, v3, home].forEach(function(button) {
+    [stl, bei, v3].forEach(function(button) {
       button.style.display = 'flex';
       view.ui.add(button, 'top-right');
     });
