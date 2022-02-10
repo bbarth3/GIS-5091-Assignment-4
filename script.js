@@ -1,5 +1,4 @@
-
-    require([
+require([
       "esri/WebScene",
       "esri/views/SceneView",
       "esri/Camera",
@@ -20,8 +19,8 @@
       
       var camera = new Camera({
         position: [
-          -71.0533464533,
-           42.369915187,
+          -71.060217,
+          42.382655,
           2500// elevation in meters
         ],
         tilt:0,
@@ -29,7 +28,27 @@
       })
       
       var camera2 = new Camera({
-        position: {
+         position: [
+          -71.0533464533,
+           42.369915187,
+          2500// elevation in meters
+        ],
+        tilt: 0,
+        heading: 0
+      });
+      
+      var camera3 = new Camera({
+         position: {
+          x: -71.092003,
+          y: 42.360001,
+          z: 5000
+        },
+        tilt: 0,
+        heading: 0
+      });
+      
+      var camera4 = new Camera({
+         position: {
           x: -71.092003,
           y: 42.360001,
           z: 5000
@@ -61,25 +80,26 @@
       // Add the home button to the top left corner of the view
     view.ui.add(homeBtn, "top-left");
     
-    [stl, bei, v3].forEach(function(button) {
+    [uss, mit, dt].forEach(function(button) {
       button.style.display = 'flex';
       view.ui.add(button, 'top-right');
     });
     
-    bei.addEventListener('click', function() {
+    uss.addEventListener('click', function() {
       // reuse the default camera position already established in the homeBtn
       view.goTo({
         target:camera2
       });
     });
     
-    stl.addEventListener('click', function() {
+    mit.addEventListener('click', function() {
       // reuse the default camera position already established in the homeBtn
       view.goTo({
-        target:camera
+        target:camera3
       });
     });
-  v3.addEventListener('click', function() {
+    
+    dt.addEventListener('click', function() {
       // reuse the default camera position already established in the homeBtn
       view.goTo({
         position: {
@@ -91,5 +111,6 @@
         heading: 50
       });
     });
+
 
     });
