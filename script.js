@@ -54,7 +54,15 @@
     });
     
     var homeBtn = new Home({
-        view: view
+        view.goTo({
+        position: {
+           x: -71.1167,
+          y: 42.3770, 
+          z: 500000
+        },
+        tilt: 0,
+        heading: 0
+      });
       });
 
       // Add the home button to the top left corner of the view
@@ -82,8 +90,8 @@
       // reuse the default camera position already established in the homeBtn
       view.goTo({
         position: {
-          x: -71.003279,
-          y: 42.341658, 
+           x: -71.033488,
+          y: 42.325623, 
           z: 500
         },
         tilt: 75,
