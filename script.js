@@ -1,4 +1,5 @@
- require([
+
+    require([
       "esri/WebScene",
       "esri/views/SceneView",
       "esri/Camera",
@@ -54,15 +55,7 @@
     });
     
     var homeBtn = new Home({
-        view.goTo({
-        position: {
-           x: -71.1167,
-          y: 42.3770, 
-          z: 500000
-        },
-        tilt: 0,
-        heading: 0
-      });
+        view: view
       });
 
       // Add the home button to the top left corner of the view
@@ -90,12 +83,12 @@
       // reuse the default camera position already established in the homeBtn
       view.goTo({
         position: {
-           x: -71.033488,
+          x: -71.033488,
           y: 42.325623, 
           z: 500
         },
         tilt: 75,
-        heading: 0
+        heading: 50
       });
     });
 
